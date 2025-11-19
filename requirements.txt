@@ -1,0 +1,14 @@
+nltk
+fastapi
+uvicorn
+streamlit
+requests
+pydantic
+loguru
+pandas
+scikit-learn
+seaborn
+plotly
+tensorflow
+pytest
+mlflow
