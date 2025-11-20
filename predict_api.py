@@ -64,7 +64,7 @@ async def predict(input_data: ClientInput):
         logger.info(f"Requête reçue : {input_data}")
 
         # Convertir DataFrame pour preprocessing
-        df = pd.DataFrame([input_data.dict()])
+        df = pd.DataFrame([input_data.model_dump()])
 
         X_processed = preprocessor_loaded.transform(df)
 
