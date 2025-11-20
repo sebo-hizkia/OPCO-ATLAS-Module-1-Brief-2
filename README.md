@@ -30,5 +30,10 @@ Lancement de l'API : ```uvicorn predict_api:app --reload --port 9000```
 
 Test de l'API via interface automatique : http://127.0.0.1:9000/docs
 
-### Page web de test
-Lancement de l'application : ```streamlit run montant_pret_streamlit.py```
+### Tests API
+```
+PYTHONPATH=. pytest
+```
+
+### Page web avec formulaire à remplir
+Lancement de l'application : ```streamlit run predict_streamlit.py```
