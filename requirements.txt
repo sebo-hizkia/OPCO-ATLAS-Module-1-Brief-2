@@ -12,3 +12,4 @@ plotly
 tensorflow
 pytest
 mlflow
+httpx

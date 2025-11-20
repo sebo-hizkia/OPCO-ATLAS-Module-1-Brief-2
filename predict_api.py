@@ -35,7 +35,6 @@ class ClientInput(BaseModel):
     smoker: str
     nationalité_francaise: str
     revenu_estime_mois: float
-    montant_pret: float
 
 # Point de terminaison pour recevoir vérifier l'état de santé de l'API
 # Cela sert aux autres programme comme Docker ou Kubernates par exemple à vérifier que tout va bien
