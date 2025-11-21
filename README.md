@@ -37,3 +37,7 @@ PYTHONPATH=. pytest
 
 ### Page web avec formulaire à remplir
 Lancement de l'application : ```streamlit run predict_streamlit.py```
+
+## Déploiement
+### Docker
+Installation sur Linux Debian/Ubuntu : ```sudo apt install docker.io docker-compose```
