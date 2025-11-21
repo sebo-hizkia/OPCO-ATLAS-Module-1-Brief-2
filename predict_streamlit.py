@@ -18,7 +18,7 @@ with st.form("client_form"):
     taille = st.number_input("Taille (cm)", 150.0, 200.0, 175.0)
     poids = st.number_input("Poids (kg)", 30.0, 150.0, 70.0)
 
-    sexe = st.selectbox("Sexe", ["Homme", "Femme"])
+    sexe = st.selectbox("Sexe", ["H", "F"])
     sport_licence = st.selectbox("Licence sportive ?", ["oui", "non"])
     niveau_etude = st.selectbox("Niveau d'étude", ["aucun","bac", "bac+2", "master", "doctorat"])
     region = st.text_input("Région")

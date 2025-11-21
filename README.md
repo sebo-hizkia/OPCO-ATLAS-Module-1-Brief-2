@@ -1,4 +1,71 @@
-# OPCO-ATLAS-Module-1-Brief-2
+# OPCO-ATLAS-Module-1-Brief-2 : API de prédiction de montant de prêt
+
+## Description
+
+Cette application expose un modèle d'IA via une API **FastAPI**.
+Elle inclut :
+
+- les endpoints `/predict` et `/health`,
+- un système de **journalisation avec Loguru**,
+- des **tests fonctionnels** avec Pytest,
+- un **Dockerfile** pour le déploiement.
+
+---
+
+## Architecture de l’API
+
+- `predict_api.py` : application FastAPI
+- `logs/` : fichiers de logs générés par Loguru
+- `tests/test_api.py` : tests fonctionnels Pytest
+- `Dockerfile` : conteneurisation de l’API
+- `requirements.txt` : dépendances Python
+
+---
+
+## Routes disponibles
+
+### `GET /health`
+
+Vérifie la santé de l’API.
+
+**Réponse :**
+
+```json
+{
+  "status": "OK"
+}
+```
+
+### `POST /predict`
+
+Envoie des données au modèle et récupère une prédiction.
+
+**Données en entrée**
+```json
+{
+  "nom": "string",
+  "prenom": "string",
+  "age": 30,
+  "taille": 175,
+  "poids": 70,
+  "sexe": "F",
+  "sport_licence": "oui",
+  "niveau_etude": "master",
+  "region": "string",
+  "smoker": "non",
+  "nationalité_francaise": "oui",
+  "revenu_estime_mois": 2500
+}
+```
+
+**Réponse :**
+
+```json
+{
+  "montant_pret": 19431.5546875
+}
+```
+
 
 ## Configuration de l'environnement virtuel python
 ```
@@ -41,6 +108,9 @@ Lancement de l'application : ```streamlit run predict_streamlit.py```
 ## Déploiement
 ### Docker
 Installation sur Linux Debian/Ubuntu : ```sudo apt install docker.io docker-compose```
+
 Ajouter votre user au groupe docker : ```sudo usermod -aG docker $USER``` et redémarrer votre session
+
 Construction de l'image : ```docker build -t predict-api .```
+
 Lancement de l'API dans Docker : ```docker run -p 9000:9000 predict-api```
