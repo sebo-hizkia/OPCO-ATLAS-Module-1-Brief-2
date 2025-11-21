@@ -40,4 +40,6 @@ Lancement de l'application : ```streamlit run predict_streamlit.py```
 
 ## Déploiement
 ### Docker
-Installation sur Linux Debian/Ubuntu : ```sudo apt install docker.io docker-compose```
+Installation sur Linux Debian/Ubuntu : ```sudo apt install docker.io docker-compose``` (il vous faudra peut-être ajouter votre user au groupe docker ```sudo usermod -aG docker $USER``` et redémarrer votre session si vous n'avez pas les droits)
+Construction de l'image : ```docker build -t predict-api .```
+Lancement de l'API dans Docker : ```docker run -p 9000:9000 predict-api```

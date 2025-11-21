@@ -1,12 +1,12 @@
 nltk
 fastapi
-uvicorn
+uvicorn[standard]
 streamlit
 requests
 pydantic
 loguru
 pandas
-scikit-learn
+scikit-learn==1.6.1
 seaborn
 plotly
 tensorflow
